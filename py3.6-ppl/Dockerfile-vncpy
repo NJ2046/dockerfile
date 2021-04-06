@@ -1,0 +1,9 @@
+FROM  172.16.1.10:8900/app/vnc:6.0
+
+RUN apt-get update && \
+    apt-get install python3-pip -y && \
+    pip3 install  --default-timeout=10000 --upgrade pip  && \
+    pip3 config set global.index-url https://mirrors.aliyun.com/pypi/simple
+
+
+
